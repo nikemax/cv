@@ -11,6 +11,39 @@
   <!-- <link rel="preload" href="./fonts/FiraGO-Regular.latin.woff2" as="font" crossorigin="anonymous"> -->
   <link href="./build.css" rel="stylesheet">
   <title>Maksym Melnychuk — Resume</title>
+  <style>
+    /* Remove ALL background props on narrow screens */
+    @media print {
+      main {
+        background: none !important;        /* resets image, position, repeat, size */
+      }
+      .pdf-link {
+        display: none;
+      }
+    }
+    @media (max-width: 1550px) {
+      main {
+        background: none !important;        /* resets image, position, repeat, size */
+      }
+
+      .portret-shown {
+        display: inline-block;
+      }
+
+      .no-portret-shown {
+        display: none;
+      }
+    }
+    @media (min-width: 1550px) {
+      .portret-shown {
+        display: none;
+      }
+
+      .no-portret-shown {
+        display: inline-block;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,19 +57,28 @@
 
       <!-- Name -->
       <header class="flex items-center mb-8 md:mb-11">
-        <div   class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
+        <div class="no-portret-shown initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
           style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/">
           <div class="initial text-center" style="padding-bottom: 0.1875rem; /*3px*/">M</div>
           <div class="text-center initial">M</div>
         </div>
+        <div class="portret-shown w-24 mr-2">
+          <img src="img/portrait.png" alt="Maksym Melnychuk logo" />
+        </div>
         <h1 class="text-2xl font-semibold text-gray-750 pb-px">
           Maksym Melnychuk
         </h1>
+        <div class="pdf-link">
+          <a href="files/Maksym-Melnychuk-CV-2025-09-10.pdf" style="background-image: url('img/pdf-document-svgrepo-com.svg'); background-position: left; background-repeat: no-repeat; background-size: contain;" class="ml-40 pl-8 text-sm2 text-gray-550 print:text-black border border-gray-300 print:border-black rounded px-2.5 py-1.5 hover:bg-gray-100 print:bg-white transition duration-100 ease-in"
+            download>
+            Download
+          </a>
+        </div>
       </header>
       <!-- end Name -->
 
       <!-- Column -->
-      <div class="md:col-count-2 print:col-count-2 col-gap-md md:h-letter-col print:h-letter-col col-fill-auto">
+      <div class="md:col-count-2 print:col-count-1 col-gap-md md:h-letter-col print:h-auto col-fill-auto">
         <section class="mt-8 first:mt-0">
           <div class="break-inside-avoid">
             <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
@@ -48,6 +90,8 @@
                 18 years of experience in IT and web development. <br />
                 System Architect, Frontend Technical/Team Lead and Senior Fullstack Developer (NodeJS & GOlang).
                 Passionate about building high-quality web applications and leading teams to success.
+                <br />
+                📍Currently based in Krakow, Poland.
               </p>
             </section>
 
@@ -473,6 +517,18 @@
                   </li>
                   <li
                     class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                    PWA
+                  </li>
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                    WebScokets
+                  </li>
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                    Server-Side Events (SSE)
+                  </li>
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
                     ReactJS
                   </li>
                   <li
@@ -606,7 +662,7 @@
                     CoachDB
                   </li>
                   <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    IndexDB
+                    IndexedDB
                   </li>
                 </ul>
               </div>
@@ -673,15 +729,24 @@
             <section class="mb-4.5 break-inside-avoid">
               <ul class="list-inside pr-7">
                 <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  Krakow, Poland
+                  📍 Krakow, Poland
                 </li>
                 <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  <a href="//cv.maxmeln.com" class="group">
-                    cv.maxmeln.com
+                  <a href="//linkedin.com/in/nikemax2007" class="group">
+                    <img src="img/LinkedIn_icon.svg" alt="LinkedIn logo" class="inline-block mr-1" style="height:12px; position: relative; top: -1px;" />
+                    LinkedIn
                     <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
                   </a>
                 </li>
                 <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                  <a href="//cv.maxmeln.com" class="group">
+                    <img src="img/file-cv-svgrepo-com.svg" alt="LinkedIn logo" class="inline-block mr-1" style="height:12px; position: relative; top: -1px;" />
+                    CV Website
+                    <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+                  </a>
+                </li>
+                <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                  <img src="img/email-open-svgrepo-com.svg" alt="LinkedIn logo" class="inline-block mr-1" style="height:12px; position: relative; top: -1px;" />
                   nikemax2007@gmail.com
                 </li>
               </ul>
