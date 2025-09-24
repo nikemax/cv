@@ -26,7 +26,8 @@
   <title>Maksym Melnychuk — Resume</title>
   <style>
     .pdf-link {
-      margin-left: auto
+      margin-left: auto;
+      display: flex;
     }
     /* Remove ALL background props on narrow screens */
     @media print {
@@ -72,7 +73,7 @@
     <div class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
 
       <!-- Name -->
-      <header class="flex items-center mb-8 md:mb-11">
+      <header class="flex items-center mb-8 md:mb-3">
         <div class="no-portret-shown initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
           style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/">
           <div class="initial text-center" style="padding-bottom: 0.1875rem; /*3px*/">M</div>
@@ -85,17 +86,19 @@
           Maksym Melnychuk
         </h1>
         <div class="pdf-link ml-40">
-          <a href="files/Maksym-Melnychuk-CV-2025-09-22.pdf" style="background-image: url('img/pdf-document-svgrepo-com.svg'); background-position: left; background-repeat: no-repeat; background-size: contain;" class="pl-8 text-sm2 text-gray-550 print:text-black border border-gray-300 print:border-black rounded px-2.5 py-1.5 hover:bg-gray-100 print:bg-white transition duration-100 ease-in"
+          <a href="files/Maksym-Melnychuk-CV-2025-09-24.pdf" class="text-sm2 text-gray-550 print:text-black border border-gray-300 print:border-black rounded px-2.5 py-1.5 hover:bg-gray-100 print:bg-white transition duration-100 ease-in"
             download>
-            Download
+            💾 Download
           </a>
           <a href="javascript:" class="ml-4 text-sm2 text-gray-550 print:text-black border border-gray-300 print:border-black rounded px-2.5 py-1.5 hover:bg-gray-100 print:bg-white transition duration-100 ease-in"
             download onclick="window.print(); return false;">
             🖨️ Print
           </a>
-          
         </div>
       </header>
+      <h2 class="mb-3 text-2xl font-semibold text-gray-750 pb-px">
+        👨‍💻 Frontend Tech and Team Lead, Senior Fullstack Developer
+      </h2>
       <!-- end Name -->
 
       <!-- Column -->
@@ -546,6 +549,12 @@
                 <li class="mt-1.5 leading-normal text-gray-700 text-md">
                   <img src="img/email-open-svgrepo-com.svg" alt="LinkedIn logo" class="inline-block mr-1" style="height:12px; position: relative; top: -1px;" />
                   nikemax2007@gmail.com
+                </li>
+                <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                  <a href="qr_code.html" class="group">
+                    🂾 QR code
+                    <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+                  </a>
                 </li>
               </ul>
             </section>
